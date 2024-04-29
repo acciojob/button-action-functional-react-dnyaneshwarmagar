@@ -1,13 +1,15 @@
-import React, {Component, useState} from "react";
-import "./../styles/App.css";
+import React, { useState } from "react";
+import './../styles/App.css';
 
-function App() {
+const App = (props) => {
+  const [visible,setVisible] = useState(false)
   return (
-    <div id="main">
-      // Do not alter the main div
+    <div className="App" id="main">
+      
+      <p id="para" className={visible?"show":"hide"}>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>
+      <button id="click" onClick={()=>{setVisible(!visible)}}>{visible?"Hide":"Show"}</button>
     </div>
   );
 }
 
-
-export default App;
+export default App
